@@ -1,0 +1,155 @@
+/*esto es el primer comentario de comit*/
+
+
+/* Estilo para el contenedor #root */
+#root {
+  /* Establece el ancho máximo del contenedor */
+  max-width: 1280px;
+  
+  /* Centra el contenedor horizontalmente en la página */
+  margin: 0 auto;
+  
+  /* Agrega un relleno alrededor del contenido del contenedor */
+  padding: 2rem;
+  
+  /* Centra el contenido del contenedor horizontalmente */
+  text-align: center;
+}
+
+/* Estilo para la clase .logo */
+.logo {
+  /* Establece la altura de la imagen del logo */
+  height: 6em;
+  
+  /* Agrega relleno alrededor del logo */
+  padding: 1.5em;
+  
+  /* Indica que el efecto CSS afectará al filtro */
+  will-change: filter;
+  
+  /* Define una transición para el filtro */
+  transition: filter 300ms;
+}
+
+/* Estilo para el logo cuando el cursor pasa sobre él */
+.logo:hover {
+  /* Aplica un efecto de sombra alrededor del logo */
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* Estilo para el logo de React cuando el cursor pasa sobre él */
+.logo.react:hover {
+  /* Aplica un efecto de sombra alrededor del logo */
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Define la animación de rotación del logo */
+@keyframes logo-spin {
+  /* Define el estado inicial de la animación */
+  from {
+    transform: rotate(0deg);
+  }
+  
+  /* Define el estado final de la animación */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplica la animación de rotación al segundo enlace dentro de un contenedor 'a' */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    /* Aplica la animación de rotación al logo */
+    animation: logo-spin infinite 10s linear;
+  }
+}
+
+/* Estilo para las tarjetas */
+.card {
+  /* Agrega relleno alrededor del contenido de la tarjeta */
+  padding: 2em;
+}
+
+/* Estilo para el texto 'read-the-docs' */
+.read-the-docs {
+  /* Establece el color del texto */
+  color: #888;
+}
+
+
+/* Logo en movimiento */
+
+/* Estilo para el título animado */
+.animated-title {
+  /* Establece el color del texto */
+  color: red;
+
+  /* Cambia el tipo de fuente */
+  font-family: 'Ink Free', serif;
+
+  /* Cambia el tamaño del texto */
+  font-size: 72px;
+
+  /* Aplica las animaciones */
+  animation: moveRightDown 5s infinite, changeColor 5s infinite;
+}
+
+/* Define la animación moveRightDown */
+@keyframes moveRightDown {
+  /* Define el estado inicial de la animación */
+  0% {
+    transform: translate(0, 0); /* Sin desplazamiento al inicio */
+  }
+  
+  /* Define el estado intermedio de la animación */
+  80% {
+    transform: translate(10px, 100px); /* Desplazamiento hacia la derecha y hacia abajo */
+  }
+  
+  /* Define el estado final de la animación */
+  100% {
+    transform: translate(5px, 5px); /* Vuelve a la posición original */
+  }
+}
+
+/* Define la animación changeColor */
+@keyframes changeColor {
+  /* Define el color inicial */
+  0% {
+    color: rgb(179, 28, 28);
+  }
+  
+  /* Define el color intermedio */
+  50% {
+    color: purple;
+  }
+  
+  /* Define el color final */
+  100% {
+    color: rgb(224, 24, 141);
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 768px) {
+  /* Define el ancho fijo para pantallas grandes */
+  .container {
+    width: 750px;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 767px) {
+  /* Define el ancho fluido para pantallas medianas */
+  .container {
+    width: 100%;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+  /* Define el ancho fluido para pantallas pequeñas */
+  .container {
+    width: 100%;
+  }
+}

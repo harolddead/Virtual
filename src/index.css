@@ -1,0 +1,485 @@
+/* Globales */
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Estilo para el elemento <body> de la página */
+body {
+  /* Establece los márgenes en 0 y centra el contenido horizontalmente */
+  margin: 0 auto;
+
+  /* Limita el ancho máximo del contenido a 1200 píxeles */
+  max-width: 1200px;
+
+  /* Establece la fuente principal del texto a 'Lato' */
+  font-family: 'Lato';
+
+  /* Define el color del texto como negro */
+  color: black;
+
+  /* Aplica una imagen de fondo al cuerpo de la página */
+  background: url(https://p4.wallpaperbetter.com/wallpaper/159/1005/82/adidas-brand-logo-colorful-music-hd-wallpaper-preview.jpg)
+    no-repeat center center fixed;
+
+  /* Ajusta el tamaño de la imagen de fondo para que cubra todo el área disponible */
+  background-size: cover;
+}
+
+/* Mobile Responsive */
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+  /* Agrega estilos específicos para dispositivos móviles aquí */
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media only screen and (min-width: 601px) {
+  /* Agrega estilos para pantallas más grandes aquí */
+}
+
+/*carro de compras*/
+
+/* Estilo para el elemento con la clase .icon-cart */
+.icon-cart {
+  /* Establece el ancho del ícono a 50 píxeles */
+  width: 50px;
+
+  /* Establece la altura del ícono a 50 píxeles */
+  height: 50px;
+}
+
+/* Estilo para el elemento con la clase .icon-cart cuando el ratón pasa sobre él */
+.icon-cart:hover {
+  /* Cambia el cursor a un puntero (mano), indicando que el elemento es clicable */
+  cursor: pointer;
+}
+
+/* Estilo para todos los elementos <img> */
+img {
+  /* Establece el ancho máximo de la imagen al 100% del contenedor padre, 
+     lo que garantiza que la imagen no se desborde del contenedor */
+  max-width: 100%;
+}
+
+/* Header */
+header {
+  /* Utiliza flexbox para organizar el contenido del header */
+  display: flex;
+
+  /* Espacia los elementos hijos del header equitativamente */
+  justify-content: space-between;
+
+  /* Aplica padding superior e inferior */
+  padding: 30px 0 40px 0;
+}
+
+/* Contenedor para el ícono del carrito */
+.container-icon {
+  /* Posiciona el contenedor de manera relativa para que los elementos hijos puedan ser posicionados absolutamente */
+  position: relative;
+}
+
+/* Contador de productos en el carrito */
+.count-products {
+  /* Posiciona el contador de forma absoluta */
+  position: absolute;
+
+  /* Ajusta la posición del contador */
+  top: 55%;
+  right: 0;
+
+  /* Establece el fondo y el color del texto */
+  background-color: black;
+  color: #fff;
+
+  /* Define el tamaño del contador */
+  width: 25px;
+  height: 25px;
+
+  /* Utiliza flexbox para centrar el contenido del contador */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Redondea el contador para que sea circular */
+  border-radius: 50%;
+}
+
+/* Estilo para el texto dentro del contador de productos */
+#contador-productos {
+  /* Ajusta el tamaño de la fuente */
+  font-size: 12px;
+}
+
+/* Contenedor para los productos del carrito */
+.container-cart-products {
+  /* Posiciona el contenedor de forma absoluta */
+  position: absolute;
+
+  /* Ajusta la posición del contenedor */
+  top: 60px;
+  right: 0;
+
+  /* Establece el fondo y el tamaño del contenedor */
+  background-color: white;
+  width: 450px;
+  height: auto;
+
+  /* Asegura que el contenedor se muestre sobre otros elementos */
+  z-index: 1;
+
+  /* Define el borde del contenedor */
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+
+  /* Redondea las esquinas del contenedor */
+  border-radius: 20px;
+}
+
+/* Estilo para cada producto en el carrito */
+.cart-product {
+  /* Utiliza flexbox para organizar el contenido del producto */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Aplica padding interno */
+  padding: 20px;
+
+  /* Agrega un borde inferior */
+  border-bottom: 3px solid black;
+}
+
+/* Información del producto en el carrito */
+.info-cart-product {
+  /* Utiliza flexbox para organizar el contenido del producto */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Ajusta el tamaño flexible del contenedor */
+  flex: 0.9;
+}
+
+/* Estilo para el título del producto en el carrito */
+.titulo-producto-carrito {
+  /* Ajusta el tamaño de la fuente */
+  font-size: 2.5vh;
+}
+
+/* Estilo para el precio del producto en el carrito */
+.precio-producto-carrito {
+  /* Establece el peso de la fuente */
+  font-weight: 700;
+
+  /* Ajusta el tamaño de la fuente */
+  font-size: 20px;
+
+  /* Agrega un margen a la izquierda */
+  margin-left: 10px;
+}
+
+/* Estilo para la cantidad del producto en el carrito */
+.cantidad-producto-carrito {
+  /* Establece el peso de la fuente */
+  font-weight: 400;
+
+  /* Ajusta el tamaño de la fuente */
+  font-size: 20px;
+}
+
+/* Estilo para el ícono de cerrar */
+.icon-close {
+  /* Ajusta el tamaño del ícono */
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo para el ícono de cerrar cuando se pasa el ratón sobre él */
+.icon-close:hover {
+  /* Cambia el cursor a un puntero, indicando que es clicable */
+  cursor: pointer;
+}
+
+/* Contenedor para el total del carrito */
+.cart-total {
+  /* Utiliza flexbox para organizar el contenido del total */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Aplica padding interno */
+  padding: 20px 0;
+
+  /* Define un espacio entre los elementos */
+  gap: 20px;
+}
+
+/* Estilo para el encabezado del total del carrito */
+.cart-total h3 {
+  /* Ajusta el tamaño y el peso de la fuente */
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Estilo para el total a pagar */
+.total-pagar {
+  /* Ajusta el tamaño y el peso de la fuente */
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Estilo para ocultar el carrito */
+.hidden-cart {
+  /* Oculta el elemento */
+  display: none;
+}
+
+/* Main */
+
+/* Contenedor para los ítems del carrito */
+.container-items {
+  /* Utiliza grid layout para organizar los ítems */
+  display: grid;
+
+  /* Define el espacio entre los ítems */
+  gap: 15px;
+
+  /* Establece un layout de cuatro columnas de igual ancho */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Estilo para cada ítem del carrito */
+.item {
+  /* Redondea las esquinas del ítem */
+  border-radius: 20px;
+}
+
+/* Estilo para cada ítem cuando se pasa el ratón sobre él */
+.item:hover {
+  /* Agrega un borde al ítem */
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* Estilo para las imágenes dentro de cada ítem */
+.item img {
+  /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  width: 100%;
+
+  /* Establece la altura de la imagen */
+  height: 300px;
+
+  /* Ajusta cómo se escala la imagen */
+  object-fit: cover;
+
+  /* Redondea las esquinas de la imagen */
+  border-radius: 20px;
+}
+
+/* Estilo para el contenedor figure de cada ítem */
+.item figure {
+  /* Oculta el contenido que se desborda del contenedor */
+  overflow: hidden;
+}
+
+/* Estilo para la imagen de cada ítem cuando se pasa el ratón sobre el ítem */
+.item:hover img {
+  /* Se puede agregar algún efecto específico aquí, actualmente está vacío */
+}
+
+/* Estilo para la información del producto */
+.info-product {
+  /* Aplica padding interno */
+  padding: 15px 30px;
+
+  /* Ajusta la altura de la línea */
+  line-height: 2;
+
+  /* Utiliza flexbox para organizar el contenido */
+  display: flex;
+  flex-direction: column;
+
+  /* Define el espacio entre los elementos */
+  gap: 10px;
+}
+
+/* Estilo para el precio del producto */
+.price {
+  /* Ajusta el tamaño y el peso de la fuente */
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Estilo para el botón en la información del producto */
+.info-product button {
+  /* Elimina el borde por defecto */
+  border: none;
+
+  /* Elimina el fondo por defecto */
+  background: none;
+  background-color: transparent;
+
+  /* Establece el color del texto */
+  color: black;
+
+  /* Aplica padding interno */
+  padding: 15px 10px;
+
+  /* Cambia el cursor a un puntero, indicando que es clicable */
+  cursor: pointer;
+
+  /* Redondea las esquinas del botón */
+  border-radius: 15px;
+
+  /* Define el borde del botón */
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* Estilo para el botón cuando se pasa el ratón sobre él */
+.info-product button:hover {
+  /* Cambia el fondo y el color del texto */
+  background-color: #000;
+  color: white;
+}
+
+/* Estilo para cuando el carrito está vacío */
+.cart-empty {
+  /* Aplica padding interno */
+  padding: 20px;
+
+  /* Centra el texto */
+  text-align: center;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+  /* Oculta el elemento */
+  display: none;
+}
+
+/* Estilo para el botón de pago */
+.btn-pago {
+  /* Elimina el borde por defecto */
+  border: none;
+
+  /* Establece el fondo y el color del texto */
+  background-color: #000;
+  color: #fff;
+
+  /* Aplica padding interno */
+  padding: 17px 0;
+
+  /* Hace que el botón se muestre como un bloque */
+  display: block;
+
+  /* Ajusta el ancho del botón */
+  width: 100%;
+
+  /* Agrega un margen en la parte superior */
+  margin-top: 10px;
+
+  /* Redondea las esquinas inferiores del botón */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  /* Usa la fuente heredada */
+  font-family: inherit;
+
+  /* Cambia el cursor a un puntero, indicando que es clicable */
+  cursor: pointer;
+
+  /* Ajusta el tamaño de la fuente */
+  font-size: 16px;
+
+  /* Aplica una transición suave en todos los cambios */
+  transition: all 0.3s ease;
+}
+
+/* Estilo para el botón de pago cuando se pasa el ratón sobre él */
+.btn-pago:hover {
+  /* Cambia el fondo y el borde redondeado */
+  background-color: green;
+  border-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Estilo para el botón de limpiar todo */
+.btn-claer-all {
+  /* Elimina el borde por defecto */
+  border: none;
+
+  /* Establece el fondo y el color del texto */
+  background-color: #000;
+  color: #fff;
+
+  /* Aplica padding interno */
+  padding: 17px 0;
+
+  /* Hace que el botón se muestre como un bloque */
+  display: block;
+
+  /* Ajusta el ancho del botón */
+  width: 100%;
+
+  /* Agrega un margen en la parte superior */
+  margin-top: 10px;
+
+  /* Usa la fuente heredada */
+  font-family: inherit;
+
+  /* Cambia el cursor a un puntero, indicando que es clicable */
+  cursor: pointer;
+
+  /* Ajusta el tamaño de la fuente */
+  font-size: 16px;
+
+  /* Aplica una transición suave en todos los cambios */
+  transition: all 0.3s ease;
+}
+
+/* Estilo para el botón de limpiar todo cuando se pasa el ratón sobre él */
+.btn-claer-all:hover {
+  /* Cambia el fondo y el borde redondeado */
+  background-color: red;
+  border-radius: 0;
+}
+
+/* Codigo del Buscador */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+#buscar {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+#lupa {
+  position: absolute;
+  right: 50px; /* Ajusta esta posición según sea necesario */
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+}
+
+#buscar:focus {
+  border-color: #007bff;
+  outline: none;
+}
